@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\DateTimeController;
+use App\Http\Controllers\TextController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +31,9 @@ Route::get('/', function (Request $request) {
 Route::get('/hello', [ HelloController::class, 'hello' ]);
 
 // TODO: criar uma rota que retorne a data-hora atual (sugestão: use a função `now()`)
+
+Route::get('/datetime', [ DateTimeController::class, 'index' ]);
+
 // TODO: criar uma rota POST que chame uma função em um controller e retorne o texto recebido na requisição
+
+Route::post('/text', [ TextController::class, 'index' ]);
