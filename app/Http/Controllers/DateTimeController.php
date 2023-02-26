@@ -9,7 +9,7 @@ class DateTimeController extends Controller
 {
     public function index(Request $request)
     {
-      $date_time = now();
+      $date_time = now()->timezone('America/Sao_Paulo');
       $formated_date = $date_time->format('d/m/Y H:i:s');
 
       return response()->json([
